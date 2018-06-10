@@ -1,59 +1,29 @@
-#1_1
-v1_character<-"RStudio"
-class(v1_character)
+#1
+a<-1L
+b<-1
+c<-'a'
+d<-TRUE
+e<-1 + 1i
+#2
+x<-c(5:75)
+y<-c(3.14, 2.71, 0, 13)
+z<-replicate(100, c(TRUE))
+#3
+matrix(c(0.5, 3.9, 0, 2, 1.3, 131, 2.2, 7, 3.5, 2.8, 4.6, 5.1), ncol=3, nrow=4)
+col1<-c(0.5, 3.9, 0, 2)
+col2<-c(1.3, 131, 2.2, 7)
+col3<-c(3.5, 2.8, 4.6, 5.1)
+combined_matrix<-cbind(col1, col2, col3)
+#4
+list(1L, 2, TRUE, 'a', 1+1i)
+#5
+people<-c('baby', 'baby', 'child', 'adult', 'adult', 'adult')
+factor(people, levels=c('baby','child','adult'))
+#6
+match(NA, c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11))
+sum(is.na(c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)))
+#7
+df<-data.frame(sum = c(1,2,3,4,5),item = c('a','b','c','d','e'))
+#8
+colnames(df)<-c('total', 'name')
 
-v2_numeric<--11.6
-class(v2_numeric)
-
-v3_integer<-3L 
-class(v3_integer)
-
-v4_complex<-2+2i
-class(v4_complex)
-
-v5_logical<-TRUE
-class(v5_logical)
-
-#1_2
-vec_1<-5:75
-vec_2_one_class<-c(3.14,2.71,0,13)
-vec_2_diff_class<-list(3.14,2.72,0,13)
-vec_3<-1:100!=0
-vec_3_2<-rep(TRUE, 100)
-
-#1_3
-#matrix
-m<-list(0.5,3.9,0,2,1.3,131,2.2,7,3.5,2.8,4.6,5.1)
-dim(m)<-c(4,3)
-
-#cbind
-x<-list(0.5,3.9,0,2)
-y<-list(1.3,131,2.2,7)
-z<-list(3.5,2.8,4.6,5.1)
-cbind(x,y,z)
-
-#rbind
-x<-list(0.5,1.3,3.5)
-y<-list(3.9,131,2.8)
-z<-list(0,2.2,4.6)
-t<-list(2,7,5.1)
-rbind(x,y,z,t)
-
-#1_4
-List<-list("RStudio",-11.6,3L,-2+2i,TRUE)
-
-#1_5
-text<-c("baby","baby","child","child","child","adult")
-factor_text<-factor(text,levels=c("baby","child","adult"))
-factor_text[1]
-
-#1_6
-x<-c(1,2,3,4,NA,6,7,NA,9,NA,11)
-min(which(is.na(x)))
-length(which(is.na(x)))
-
-#1_7
-mydata<-read.csv('Score_lab1.csv')
-
-#1_8
-names(mydata)<- c("Name2","Surname2","Gender2","Faculty2","Subject_qty2","Score_avg2")

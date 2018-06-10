@@ -27,4 +27,4 @@ mean(subset(data,Month==6)$Temp,na.rm=T)
 
 #4_9
 max(subset(data,Month==5)$Ozone,na.rm=T)
-set
+
